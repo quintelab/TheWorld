@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>The World</title>
@@ -8,7 +8,7 @@
 <body>
     <div id="sidebar">
         <img src="img/user1.jpg" alt="headshot" class="headshot" />
-        <span>Sam Hastings</span>
+        <span id="username">Sam Hastings</span>
         <ul class="menu">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -17,6 +17,9 @@
     </div>
     <div id="wrapper">
         <div id="main">
+            <div>
+                <button id="sidebarToggle">Toggle Menu</button>
+            </div>
             <h1>The World</h1>
             <p>This will be a fun website soon!</p>
 
@@ -36,5 +39,8 @@
             &copy; 2016 QUINTELLA
         </div>
     </div>
+
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </body>
 </html>
