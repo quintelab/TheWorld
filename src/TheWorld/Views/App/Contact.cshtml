@@ -15,18 +15,26 @@
             {
                 <div>@ViewBag.Message</div>
             }
-
             <div asp-validation-summary="ModelOnly"></div>
-            <label asp-for="Name">Name</label>
-            <input asp-for="Name" />
-            <span asp-validation-for="Name"></span>
-            <label asp-for="Email">Email</label>
-            <input type="email" asp-for="Email" />
-            <span asp-validation-for="Email"></span>
-            <label>Message</label>
-            <textarea cols="40" rows="4" asp-for="Message"></textarea>
-            <span asp-validation-for="Message"></span>
-            <div><input type="submit" value="Send Message" /></div>
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-muted"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                <input type="email" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-muted"></span>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea cols="40" rows="4" asp-for="Message" class="form-control"></textarea>
+                <span asp-validation-for="Message" class="text-muted"></span>
+            </div>
+            <div class="form-group">
+                <a asp-controller="App" asp-action="Index"class="btn btn-default">Cancel</a>
+                <input type="submit" value="Send Message" class="btn btn-success" />
+            </div>
         </form>
     </div>
 </div>
