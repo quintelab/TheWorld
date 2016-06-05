@@ -1,19 +1,4 @@
 /* site.css */
-#main {
-    background-color: #eee;
-    padding: 4px;
-    margin: 0;
-}
-
-#footer {
-    background-color: #222;
-    color: #eee;
-    padding: 8px 5px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 .headshot {
     max-width: 50px;
     border: 1px solid #222;
@@ -28,9 +13,13 @@
         list-style-type: none;
     }
 
-        .menu li.active {
-            font-weight: bold;
-        }
+    .menu li a {
+        color: #eee;
+    }
+
+    .menu li.active {
+        font-weight: bold;
+    }
 
 #sidebar {
     background: #2a2c36;
