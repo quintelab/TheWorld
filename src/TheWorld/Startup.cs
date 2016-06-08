@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TheWorld.Models;
 using TheWorld.Services;
 
 namespace TheWorld
@@ -25,6 +27,10 @@ namespace TheWorld
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddEntityFramework()
+                .AddEntityFrameworkSqlServer()
+                .AddDbContext<WorldContext>();
+
 
 #if DEBUG
             services.AddScoped<IMailService, DebugMailService>();
