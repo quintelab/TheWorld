@@ -27,9 +27,7 @@ namespace TheWorld
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddEntityFramework()
-                .AddEntityFrameworkSqlServer()
-                .AddDbContext<WorldContext>();
+            services.AddDbContext<WorldContext>();
 
 
 #if DEBUG
